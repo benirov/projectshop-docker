@@ -1,0 +1,87 @@
+body
+{
+	margin: 0px;
+	color: #fff;
+	overflow-x: hidden;
+}
+*, *::after, *::before
+{
+  -ms-box-sizing:  inherit;
+  -webkit-box-sizing:  inherit;
+  -moz-box-sizing:  inherit;
+  margin: 0;
+  padding: 0;
+}
+p, h1,h2,h3,h4
+{
+	color: #79BCDA;
+}
+h2
+{
+  font-size: 28px;
+  font-size: 1.75rem;
+}
+li
+{
+  margin-left: 16px;
+  margin-left: 1rem;
+  list-style-type: inherit;
+  list-style-position: inside;
+}
+.header
+{
+	background-color: #24292E;
+	height : 15vh;
+}
+
+.header > div
+{
+	padding: 15px;
+}
+
+p, h1,h2,h3,h4
+{
+	font-family: 'Slabo 27px', serif;
+}
+
+.main
+{
+	height : 130vh;
+	background-color: #7874f2;
+}
+
+.colorwhite
+{
+	color: #fff;
+}
+
+.sections
+{
+	width: 50%;
+	margin: auto;
+	padding: 45px;
+}
+
+.sections > div
+{
+	background-color: #24292E;
+    margin: px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+@media screen 
+  and (max-width: 1000px)
+   {
+    .main {
+       height: 140vh;
+}
+
+@media screen 
+  and (max-width: 880px)
+   {
+    .sections {
+       width: 100%;
+       padding: 0px;
+}

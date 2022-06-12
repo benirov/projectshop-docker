@@ -1,0 +1,8 @@
+.gridOrder{
+    margin-top: 115px!important;
+    
+}
+
+.gridOrder > .MuiPaper-elevation {
+    width: 100%;
+}

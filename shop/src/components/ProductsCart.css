@@ -1,0 +1,31 @@
+.MuiPaper-root{
+    pointer-events: auto!important;
+}
+
+.productquantity{
+    margin-top: 9px;
+}
+
+.card-wheel {
+	margin-top: 17px;
+	border: 0.2px solid #4e515085;
+	width: 90px;
+	padding: 8px 8px;
+	border-radius: 10px;
+	font-size: 12px;
+	display: flex;
+	justify-content: space-between;
+  }
+  .card-wheel button {
+	background: #E0E0E0;
+	color: #828282;
+	width: 15px;
+	height: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0;
+	cursor: pointer;
+	border-radius: 3px;
+	font-weight: 500;
+  }

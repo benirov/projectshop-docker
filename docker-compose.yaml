@@ -1,0 +1,48 @@
+version: "3"
+services:
+  react-app:
+    container_name: react-app
+    build: ./shop/
+    depends_on:
+      - api-server
+    environment:
+      REACT_APP_BACKENDURL: http://localhost:4000
+    stdin_open: true
+    ports: 
+      - "3000:3000"
+    networks:
+      - shop-app
+  api-server:
+    container_name: api-server
+    build: ./apinode/
+    environment:
+      PORT: 4000
+      MONGODB_URI: mongodb://mongo:27017/shop
+      SECRET_TOKEN: mykeytoken
+    depends_on:
+      - mongo
+    ports:
+      - "4000:4000"
+    networks:
+      - shop-app
+    depends_on:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: shop
+    ports:
+      - "27017:27017"
+    networks:
+      - shop-app
+    volumes:
+      - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro 
+      - ./mongo-volume:/data/db
+networks:
+  shop-app:
+    driver: bridge
+volumes:
+  mongo-db:
+    driver: local
